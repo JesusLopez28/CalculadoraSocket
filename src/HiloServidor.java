@@ -17,7 +17,7 @@ public class HiloServidor extends Thread {
             entrada = new DataInputStream(socket.getInputStream());
             salida = new DataOutputStream(socket.getOutputStream());
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
+            //JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
         }
     }
 
@@ -25,7 +25,7 @@ public class HiloServidor extends Thread {
         try {
             socket.close();
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
+            //JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
         }
     }
 
@@ -71,7 +71,7 @@ public class HiloServidor extends Thread {
                 }
             }
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
+            //JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
         } finally {
             desconectar();
         }
@@ -89,7 +89,7 @@ public class HiloServidor extends Thread {
                 if (num2 != 0) {
                     return num1 / num2;
                 } else {
-                    JOptionPane.showMessageDialog(null, "Error: División por cero");
+                    //JOptionPane.showMessageDialog(null, "Error: División por cero");
                     return 0;
                 }
             case "%":
